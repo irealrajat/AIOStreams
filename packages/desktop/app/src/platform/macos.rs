@@ -581,6 +581,7 @@ impl VideoLayer {
             // SAFETY: the static is a valid, constant string.
             layer.setContentsFormat(unsafe { kCAContentsFormatRGBA16Float });
         }
+        video::set_sdr_colorspace(&layer);
         Ok(layer)
     }
 
